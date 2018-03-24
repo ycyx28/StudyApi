@@ -2,6 +2,9 @@ package com.ycyx28.study.api.response;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 public class ServiceResponse implements Serializable{
 	
 	private static final long serialVersionUID = 2563923050439424380L;
@@ -26,5 +29,9 @@ public class ServiceResponse implements Serializable{
 		this.retMsg = retMsg;
 	}
 	
+	@Override
+	public String toString(){
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+	}
 
 }
